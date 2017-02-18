@@ -1,0 +1,95 @@
+body{
+  background-image: url('assets/images/pink-watercolor/3462.jpg');
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.flipper{
+  width: 300px;
+  height: 350px;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.row{
+  text-align: center;
+}
+
+.flip-container {
+  display: inline-block;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+/*.flip-container, .front, .back {
+	width: 300px;
+	height: 350px;
+}*/
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.8s;
+  /*transition-delay: 0.2s;*/
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-color: #ffffff;
+  width: 300px;
+  height: 350px;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.center-img {
+  width: 150px;
+  height: 150px;
+  margin: 50px 75px;
+}
+
+.front h4 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.top-row {
+  margin-top: 100px;
+}
+
+.back-text {
+  margin: 20px;
+  font-size: 18px;
+  color: gray;
+  vertical-align: middle;
+  height: 100%;
+  opacity: 1;
+}
