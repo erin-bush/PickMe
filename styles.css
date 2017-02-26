@@ -4,6 +4,27 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+h1 {
+  color: #fff;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 5px solid #fff;
+  vertical-align: middle;
+}
+
+.title-bar{
+  text-align: center;
+  padding-top: 40px;
+}
+
 .flipper{
   width: 300px;
   height: 350px;
@@ -85,11 +106,23 @@ body{
   margin-top: 100px;
 }
 
+.bottom-row {
+  margin-bottom: 100px;
+}
+
 .back-text {
-  margin: 20px;
+  margin: 50px 20px;
   font-size: 18px;
   color: gray;
-  vertical-align: middle;
-  height: 100%;
   opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+
+.back-img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
 }
